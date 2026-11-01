@@ -139,9 +139,9 @@ This produces the `secgw` binary. `make clean` removes build files.
 ### 1. Create the topology
 
 ```bash
-chmod +x *.sh
+sed -i 's/\r$//' *.sh *.c *.h Makefile
 sudo ./setup_topology.sh
-sudo ip netns exec pc1 ping -c2 10.0.2.1     # check connectivity
+sudo ip netns exec pc1 ping -c2 10.0.2.1  #check connectivity
 ```
 
 ### 2. Run the demo
